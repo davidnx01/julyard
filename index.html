@@ -1,0 +1,322 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Julyard · káva, palacinky a zmrzlinové rolky v Piešťanoch — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh webu pre Julyard, Rázusova 11 v Piešťanoch: káva, palacinky, croissanty, matcha, čokoláda a zmrzlinové rolky.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EFF3F3; --steel:#DDE4E6; --steel-d:#BFCACD; --frost:#FBFDFD;
+  --choc:#3A2218; --choc-2:#4C2E21; --cocoa:#7A5444;
+  --punch:#E2465E; --punch-d:#B92F47; --matcha:#94B447; --taro:#B9A4DA; --vanilla:#F4E3C1; --gold:#C9A46A;
+  --line:rgba(58,34,24,.14);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--choc);font:400 17px/1.6 Manrope,system-ui,sans-serif}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--punch);outline-offset:3px;border-radius:3px}
+.in{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.cap{font:700 12px/1.3 Manrope,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.tn{font-variant-numeric:tabular-nums}
+.disp{font-family:Shrikhand,cursive;font-weight:400;letter-spacing:0}
+
+.notice{background:var(--choc);color:#F6E9DC;font-size:13.5px;line-height:1.45;padding:9px 16px;text-align:center}
+
+/* header */
+.hd{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:16px;padding-bottom:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:44px;height:44px;flex:none}
+.brand b{font:400 30px/1 Shrikhand,cursive;color:var(--choc)}
+.brand small{display:block;font:600 10.5px/1.2 Manrope,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--cocoa);margin-top:3px}
+.menu{display:flex;align-items:center;gap:26px;font-weight:600;font-size:15px}
+.menu a{text-decoration:none;padding:12px 0;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+.menu a:hover{background-size:100% 1px}
+.menu .call{background:var(--punch);color:#fff;padding:11px 18px;border-radius:999px;font-variant-numeric:tabular-nums}
+.menu .call:hover{background:var(--punch-d)}
+
+/* hero = chladená doska */
+.hero{display:grid;grid-template-columns:1.45fr 1fr;gap:28px;align-items:stretch;padding-top:6px;padding-bottom:34px}
+.plate{position:relative;border-radius:10px;padding:46px 46px 36px;overflow:hidden;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.4) 0 1px,transparent 1px 4px),linear-gradient(170deg,#F4F7F8,#D5DDE0 70%,#C8D2D5);
+  box-shadow:inset 0 0 0 1px rgba(58,34,24,.08),inset 0 0 0 9px #E9EEEF,inset 0 0 0 10px rgba(58,34,24,.10),0 30px 50px -36px rgba(58,34,24,.6)}
+.plate::before{content:"";position:absolute;inset:10px;border-radius:6px;pointer-events:none;
+  background:radial-gradient(circle at 12% 18%,rgba(255,255,255,.75) 0 1.2px,transparent 2px) 0 0/38px 41px,radial-gradient(circle at 60% 70%,rgba(255,255,255,.6) 0 1px,transparent 1.6px) 0 0/27px 23px;opacity:.7}
+.plate>*{position:relative}
+.plate .cap{color:var(--cocoa)}
+.plate h1{margin:10px 0 0;font:400 clamp(72px,10.5vw,138px)/.95 Shrikhand,cursive;color:var(--choc)}
+.sheet{display:block;width:100%;max-width:560px;height:auto;margin:6px 0 18px}
+.plate blockquote{margin:0;font-weight:600;font-size:17px;color:var(--cocoa);letter-spacing:.02em}
+.plate p.lead{margin:10px 0 24px;font-size:19px;line-height:1.5;max-width:520px}
+.acts{display:flex;flex-wrap:wrap;gap:12px}
+.b1,.b2{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;transition:background .2s,border-color .2s}
+.b1{background:var(--choc);color:#fff}
+.b1:hover{background:#21130D}
+.b2{border:1.5px solid var(--choc)}
+.b2:hover{background:rgba(58,34,24,.06)}
+.rolls{display:flex;gap:10px;margin-top:30px}
+.rolls svg{width:46px;height:46px;flex:none}
+.cup{margin:0;position:relative;border-radius:10px;overflow:hidden;background:var(--choc)}
+.cup img{width:100%;height:100%;min-height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform .5s}
+.cup:hover img{transform:scale(1.045)}
+.cup figcaption{position:absolute;left:12px;bottom:12px;background:rgba(58,34,24,.82);color:#fff;font-size:13px;padding:6px 11px;border-radius:999px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 34px;padding:22px 0 0;margin:0;list-style:none;border-top:1px solid var(--line);font-size:15px}
+.facts b{font-weight:700}
+
+/* ťah špachtle */
+.scrape{display:block;width:100%;height:46px;color:var(--steel-d)}
+
+/* nadpis sekcie = zrolovaný pás */
+.strip{display:inline-flex;align-items:center;gap:0;margin:0 0 10px}
+.strip svg{width:58px;height:58px;flex:none;margin-right:-14px;position:relative;z-index:1}
+.strip h2{margin:0;padding:8px 26px 10px 28px;border-radius:0 999px 999px 0;font:400 clamp(26px,3.6vw,40px)/1.15 Shrikhand,cursive;color:var(--choc);background:var(--c)}
+.intro{margin:10px 0 30px;max-width:620px;color:var(--cocoa);font-size:16.5px}
+section{padding:46px 0}
+
+/* money block — čokoládová doska */
+.board{background:var(--choc);color:#F6E9DC;border-radius:10px;padding:46px clamp(20px,4vw,52px) 40px;position:relative;overflow:hidden}
+.board::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:linear-gradient(90deg,var(--matcha) 0 16.6%,var(--taro) 0 33.3%,var(--punch) 0 50%,var(--vanilla) 0 66.6%,var(--cocoa) 0 83.3%,var(--gold) 0)}
+.board .strip h2{color:var(--choc)}
+.board .intro{color:rgba(246,233,220,.78)}
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:0;list-style:none;margin:0;padding:0;border-top:1px solid rgba(246,233,220,.16)}
+.grid6 li{display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:center;padding:24px 18px 24px 0;border-bottom:1px solid rgba(246,233,220,.16)}
+.grid6 svg{width:64px;height:64px}
+.grid6 h3{margin:0;font:400 26px/1.1 Shrikhand,cursive;color:#fff}
+.grid6 span{display:block;font-size:14px;color:rgba(246,233,220,.7);margin-top:4px}
+.board .demo{margin:24px 0 6px;font-size:14px;color:rgba(246,233,220,.75);max-width:760px}
+.board .demo b{color:#fff}
+
+/* vitrína */
+.vit{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+.vit figure{margin:0;position:relative;border-radius:8px;overflow:hidden;background:var(--steel)}
+.vit figure.big{grid-row:span 2}
+.vit img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.vit figure:hover img{transform:scale(1.045)}
+.vit .big img{aspect-ratio:auto}
+.vit figcaption{position:absolute;left:10px;right:10px;bottom:10px;font-size:13.5px;font-weight:700;color:var(--choc);background:rgba(251,253,253,.92);padding:6px 11px;border-radius:999px;width:max-content;max-width:calc(100% - 20px)}
+.src{font-size:13.5px;color:var(--cocoa);margin:14px 0 0}
+
+/* o nás + hodiny */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.sign{display:grid;grid-template-columns:230px 1fr;gap:26px;align-items:center;background:var(--frost);border-radius:10px;padding:22px;box-shadow:inset 0 0 0 1px var(--line)}
+.sign img{border-radius:6px;width:230px;aspect-ratio:1;object-fit:cover}
+.sign h3,.hours h3{margin:0 0 8px;font:400 26px/1.15 Shrikhand,cursive}
+.sign p{margin:0 0 10px;font-size:15.5px}
+.sign ul{margin:0;padding:0;list-style:none;font-size:15px}
+.sign li{padding:6px 0;border-top:1px solid var(--line)}
+.hours{background:var(--matcha);border-radius:10px;padding:30px 30px 26px;color:var(--choc)}
+.hours .big{font:800 clamp(40px,5vw,58px)/1 Manrope,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.02em;margin:6px 0 4px}
+.hours p{margin:0;font-size:15px}
+.hours .r{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;padding-top:16px;border-top:1px solid rgba(58,34,24,.2);font-size:15px}
+.hours .r b{font-weight:800;font-variant-numeric:tabular-nums}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.kontakt dl{margin:0;display:grid;grid-template-columns:120px 1fr}
+.kontakt dt,.kontakt dd{margin:0;padding:13px 0;border-top:1px solid var(--line);font-size:16px}
+.kontakt dt{font:700 12px/1.3 Manrope,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--cocoa);padding-top:17px}
+.kontakt dd a{text-decoration:none;font-weight:600;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+.kontakt dd a:hover{background-size:100% 1px}
+.kontakt dd small{display:block;color:var(--cocoa);font-size:13.5px}
+.map{display:flex;flex-direction:column;justify-content:space-between;gap:20px;border-radius:10px;padding:30px;background:var(--taro);text-decoration:none;min-height:240px;transition:background .2s}
+.map:hover{background:#AF98D4}
+.map b{font:400 clamp(30px,4vw,44px)/1.05 Shrikhand,cursive}
+.map span{font-weight:700}
+
+footer{margin-top:40px;background:var(--choc);color:rgba(246,233,220,.8);font-size:14px}
+footer .in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;padding-bottom:24px}
+
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(239,243,243,.97);border-top:1px solid var(--line)}
+.dock a{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;font-weight:700;text-decoration:none}
+.dock a:first-child{background:var(--punch);color:#fff}
+.dock a:last-child{border:1.5px solid var(--choc)}
+
+@media (max-width:980px){
+  .menu a:not(.call){display:none}
+  .hero{grid-template-columns:1fr}
+  .cup img{aspect-ratio:4/3;object-position:50% 45%}
+  .grid6{grid-template-columns:1fr 1fr}
+  .duo,.kontakt{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  footer{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+  .dock{display:flex}
+  .brand b{font-size:26px}
+  .brand small{display:none}
+  .menu .call{padding:11px 15px;font-size:14px}
+  .plate{padding:32px 22px 26px}
+  .plate h1{font-size:76px}
+  .plate p.lead{font-size:17px}
+  .rolls{gap:6px;margin-top:24px}
+  .rolls svg{width:36px;height:36px}
+  .cup img{aspect-ratio:1/1}
+  .facts{gap:8px 20px;font-size:14.5px}
+  section{padding:34px 0}
+  .strip svg{width:48px;height:48px}
+  .strip h2{padding:7px 20px 9px 22px}
+  .board{padding:32px 20px 34px}
+  .grid6{grid-template-columns:1fr}
+  .grid6 li{grid-template-columns:52px 1fr;gap:14px;padding:16px 0}
+  .grid6 svg{width:52px;height:52px}
+  .grid6 h3{font-size:23px}
+  .vit{grid-template-columns:1fr 1fr;gap:10px}
+  .vit figure.big{grid-column:span 2;grid-row:auto}
+  .vit .big img{aspect-ratio:5/4}
+  .vit figcaption{font-size:12.5px;left:6px;bottom:6px;padding:5px 9px;max-width:calc(100% - 12px)}
+  .sign{grid-template-columns:1fr;padding:18px}
+  .sign img{width:100%;max-width:315px}
+  .hours{padding:24px 20px}
+  .kontakt dl{grid-template-columns:1fr}
+  .kontakt dd{border-top:0;padding-top:0}
+  .map{min-height:180px;padding:24px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="roll" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19"/><path d="M20 20a2 2 0 0 1 4 0a4 4 0 0 1-8 0a6 6 0 0 1 12 0a8 8 0 0 1-16 0a10 10 0 0 1 20 0a12 12 0 0 1-24 0a14 14 0 0 1 28 0a16 16 0 0 1-32 0" fill="none" stroke="rgba(58,34,24,.32)" stroke-width="1.3"/><circle cx="20" cy="20" r="19" fill="none" stroke="rgba(58,34,24,.18)"/></symbol>
+</svg>
+
+<p class="notice">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</p>
+
+<header class="in hd">
+  <a class="brand" href="#" aria-label="Julyard — úvod">
+    <svg viewBox="0 0 40 40" fill="#C9A46A" aria-hidden="true"><use href="#roll"/></svg>
+    <span><b>Julyard</b><small>coffee · pancakes · croissants</small></span>
+  </a>
+  <nav class="menu" aria-label="Hlavná navigácia">
+    <a href="#ponuka">Ponuka</a>
+    <a href="#vitrina">Vitrína</a>
+    <a href="#hodiny">Hodiny</a>
+    <a href="#kontakt">Kontakt</a>
+    <a class="call" href="tel:+421951094023">0951 094 023</a>
+  </nav>
+</header>
+
+<main>
+<div class="in">
+  <div class="hero">
+    <div class="plate">
+      <p class="cap">Piešťany · Rázusova 11 · Námestie slobody</p>
+      <h1>Julyard</h1>
+      <svg class="sheet" viewBox="0 0 560 70" aria-hidden="true">
+        <path d="M0 22h470a14 14 0 0 1 0 28H0z" fill="#E2465E"/>
+        <path d="M0 22h470" stroke="#B92F47" stroke-width="1.5" opacity=".5"/>
+        <g transform="translate(500 36)"><circle r="33" fill="#E2465E"/><path d="M0 0a3 3 0 0 1 6 0a6 6 0 0 1-12 0a9 9 0 0 1 18 0a12 12 0 0 1-24 0a15 15 0 0 1 30 0a18 18 0 0 1-36 0a21 21 0 0 1 42 0a24 24 0 0 1-48 0a27 27 0 0 1 54 0" transform="scale(1.15)" fill="none" stroke="#B92F47" stroke-width="1.6"/></g>
+      </svg>
+      <blockquote>„• coffee • pancakes • croissants • matcha • chocolate“</blockquote>
+      <p class="lead">Káva, palacinky, croissanty, matcha, čokoláda a zmrzlinové rolky — v centre Piešťan, na mieste aj so sebou.</p>
+      <div class="acts">
+        <a class="b1" href="tel:+421951094023">Zavolať</a>
+        <a class="b2" href="https://www.instagram.com/_julyard/" rel="noopener" target="_blank">Instagram</a>
+      </div>
+      <div class="rolls" aria-hidden="true">
+        <svg fill="#94B447"><use href="#roll"/></svg><svg fill="#B9A4DA"><use href="#roll"/></svg><svg fill="#E2465E"><use href="#roll"/></svg><svg fill="#F4E3C1"><use href="#roll"/></svg><svg fill="#7A5444"><use href="#roll"/></svg><svg fill="#C9A46A"><use href="#roll"/></svg>
+      </div>
+    </div>
+    <figure class="cup">
+      <img src="assets/matcha-a-ladova-kava.webp" width="900" height="1200" fetchpriority="high" alt="Ľadová matcha a ľadová káva vo vysokých pohároch, za nimi kytica kvetov">
+      <figcaption>Matcha a ľadová káva · foto z ich Facebooku</figcaption>
+    </figure>
+  </div>
+  <ul class="facts">
+    <li><b>So sebou · na mieste · posedenie vonku</b></li>
+    <li>Denne <b class="tn">10:00 – 18:00</b> <span style="color:var(--cocoa)">(overiť)</span></li>
+    <li><b class="tn">96 %</b> odporúča na Facebooku (16)</li>
+    <li><b class="tn">4,4 ★</b> Google · 185 recenzií</li>
+  </ul>
+</div>
+
+<svg class="scrape" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 28C140 14 260 34 400 24s250-16 400-4 260 14 400 0" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M0 34C150 22 270 40 410 31s250-14 390-4 250 12 400 0" fill="none" stroke="currentColor" stroke-width="2" opacity=".6"/></svg>
+
+<section id="ponuka">
+  <div class="in">
+    <div class="board">
+      <div class="strip" style="--c:#94B447"><svg fill="#94B447"><use href="#roll"/></svg><h2>Čo tu nájdete</h2></div>
+      <p class="intro">Šesť vecí, ktoré Julyard sám uvádza vo svojom profile — od rannej kávy po zmrzlinu zrolovanú na ľadovej doske.</p>
+      <ul class="grid6">
+        <li><svg fill="#C9A46A"><use href="#roll"/></svg><div><h3>Káva</h3><span>„coffee“</span></div></li>
+        <li><svg fill="#F4E3C1"><use href="#roll"/></svg><div><h3>Palacinky</h3><span>„pancakes“</span></div></li>
+        <li><svg fill="#E0B57A"><use href="#roll"/></svg><div><h3>Croissanty</h3><span>„croissants“</span></div></li>
+        <li><svg fill="#94B447"><use href="#roll"/></svg><div><h3>Matcha</h3><span>„matcha“</span></div></li>
+        <li><svg fill="#7A5444"><use href="#roll"/></svg><div><h3>Čokoláda</h3><span>„chocolate“</span></div></li>
+        <li><svg fill="#E2465E"><use href="#roll"/></svg><div><h3>Zmrzlinové rolky</h3><span>„ice cream rolls“</span></div></li>
+      </ul>
+      <p class="demo"><b>Ukážka návrhu:</b> konkrétne položky a ceny doplní kaviareň. Ponuka podľa profilu na Facebooku a menumenu.sk (4. 10. 2026).</p>
+    </div>
+  </div>
+</section>
+
+<section id="vitrina">
+  <div class="in">
+    <div class="strip" style="--c:#F2B9C3"><svg fill="#E2465E"><use href="#roll"/></svg><h2>Z vitríny</h2></div>
+    <p class="intro">Zákusky, ktoré kaviareň ukazuje na svojom Facebooku. Popisky podľa tabuliek vo vitríne — ponuka sa mení.</p>
+    <div class="vit">
+      <figure class="big"><img src="assets/puncovy-rez-vitrina.webp" width="1000" height="785" loading="lazy" alt="Ružové punčové rezy na sklenenom podnose vo vitríne"><figcaption>Punčový rez</figcaption></figure>
+      <figure><img src="assets/pavlova-bezlepkova.webp" width="315" height="315" loading="lazy" alt="Pavlovovej tortičky s ružovým krémom, malinami a čučoriedkou"><figcaption>Pavlovovej tortička, bezlepková</figcaption></figure>
+      <figure><img src="assets/zamatova-rolada.webp" width="315" height="315" loading="lazy" alt="Plátky čokoládovej rolády vo vitríne"><figcaption>Zamatová roláda</figcaption></figure>
+      <figure><img src="assets/veternik.webp" width="315" height="315" loading="lazy" alt="Veterníky s karamelovou polevou vo vitríne"><figcaption>Veterník</figcaption></figure>
+      <figure><img src="assets/rez-s-makom.webp" width="315" height="315" loading="lazy" alt="Rezy s makovým korpusom a ovocnou vrstvou"><figcaption>Rez s makom</figcaption></figure>
+    </div>
+    <p class="src">Fotky z Facebooku kaviarne.</p>
+  </div>
+</section>
+
+<svg class="scrape" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20C160 34 300 12 460 22s260 14 420 2 220-10 320 4" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M0 27C170 40 310 19 470 29s250 12 410 1 220-9 320 4" fill="none" stroke="currentColor" stroke-width="2" opacity=".6"/></svg>
+
+<section id="hodiny">
+  <div class="in duo">
+    <div class="sign">
+      <img src="assets/tabula-brunch-coffee.webp" width="315" height="315" loading="lazy" alt="Drevená tabuľa s nápisom Julyard brunch &amp; coffee a latte na podnose">
+      <div>
+        <h3>Brunch &amp; coffee</h3>
+        <p>Na menumenu.sk sa predstavujú ako „Julyard Breakfast &amp; Brunch“.</p>
+        <ul>
+          <li>So sebou aj na mieste</li>
+          <li>Posedenie vonku</li>
+          <li>Platba kartou</li>
+        </ul>
+      </div>
+    </div>
+    <div class="hours">
+      <p class="cap">Otváracie hodiny</p>
+      <p class="big">10:00 – 18:00</p>
+      <p>Pondelok až nedeľa, podľa menumenu.sk (4. 10. 2026). Pred návštevou radšej overte na Facebooku.</p>
+      <div class="r"><span>Hodnotenie:</span><span><b>96 %</b> odporúča · Facebook (16)</span><span><b>4,4 ★</b> Google (185) · podľa Wanderlogu, 30. 9. 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="in">
+    <div class="strip" style="--c:#D5C8EC"><svg fill="#B9A4DA"><use href="#roll"/></svg><h2>Kde nás nájdete</h2></div>
+    <div class="kontakt" style="margin-top:20px">
+      <dl>
+        <dt>Adresa</dt><dd>Rázusova 1692/11, 921 01 Piešťany<small>Námestie slobody</small></dd>
+        <dt>Telefón</dt><dd><a class="tn" href="tel:+421951094023">+421 951 094 023</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:julyrestsro@gmail.com">julyrestsro@gmail.com</a></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/_julyard/" rel="noopener" target="_blank">@_julyard</a></dd>
+        <dt>Facebook</dt><dd><a href="https://www.facebook.com/profile.php?id=100063116385709" rel="noopener" target="_blank">Julyard</a></dd>
+        <dt>Profil</dt><dd><a href="https://menumenu.sk/julyard/onas" rel="noopener" target="_blank">menumenu.sk/julyard</a></dd>
+      </dl>
+      <a class="map" href="https://www.google.com/maps/search/Julyard+Pie%C5%A1%C5%A5any" rel="noopener" target="_blank">
+        <span class="cap">Google Maps</span>
+        <b>Rázusova 11, Piešťany</b>
+        <span>Otvoriť mapu →</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="in"><span>Neoficiálny návrh webu · webdavid.sk · 2026</span><span>Julyard · Piešťany</span></div></footer>
+
+<nav class="dock" aria-label="Rýchle akcie">
+  <a href="tel:+421951094023">Zavolať</a>
+  <a href="https://www.google.com/maps/search/Julyard+Pie%C5%A1%C5%A5any" rel="noopener" target="_blank">Mapa</a>
+</nav>
+</html>
